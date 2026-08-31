@@ -121,7 +121,8 @@ img {
 .container__hero,
 .container__contact-text {
   color: var(--color-muted);
-  font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+  font-size: 1.125rem;
+  line-height: 1.35;
   letter-spacing: 0;
   text-transform: lowercase;
   text-align: center;
@@ -153,7 +154,8 @@ img {
 
 .container__contact-list a {
   color: var(--color-text);
-  font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+  font-size: 1.125rem;
+  line-height: 1.35;
   text-transform: lowercase;
   text-decoration: none;
 }
@@ -169,7 +171,7 @@ img {
 }
 
 .container__partners {
-  width: 60%;
+  width: 75%;
   align-self: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
@@ -180,7 +182,7 @@ img {
 
 .container__partner {
   min-height: clamp(5.5rem, 10vw, 8rem);
-  padding: clamp(1rem, 2vw, 1.75rem);
+  padding: clamp(1rem, 7vw, 1.75rem);
   display: grid;
   place-items: center;
   background: var(--color-page);
@@ -194,11 +196,28 @@ img {
 }
 
 @media (max-width: 768px) {
-  .container__partners{
+  .container__partners {
     width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .container__contact {
     flex-direction: column;
+  }
+}
+
+@media (min-width: 640px) {
+  .container__hero,
+  .container__contact-text,
+  .container__contact-list a {
+    font-size: 1.375rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container__hero,
+  .container__contact-text,
+  .container__contact-list a {
+    font-size: 1.75rem;
   }
 }
